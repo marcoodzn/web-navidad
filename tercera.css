@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+
+
+@media (max-width: 768px) {
+    .banner-container {
+        height: 240px; /* Ajusta l'alçada per a pantalles mitjanes */
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-container {
+        height: 120px; /* Ajusta l'alçada per a pantalles petites */
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #1c2833, #34495e); /* Fondo degradado */
+    color: #ecf0f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+
+
+
+    /* Header styles */
+    header {
+      text-align: center;
+      margin-bottom: 60px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #ffffff;
+      
+    }
+
+    /* Card container styles */
+    .card-container {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    /* Individual card styles */
+    .card {
+      background-color: white;
+      width: 200px;
+      height: 300px;
+      border: 2px solid transparent;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, border-color 0.3s ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      border-color: #ff6347;
+    }
+
+    .card img {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    /* Frames for photos */
+    .frame-container {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    .frame {
+      width: 150px;
+      height: 200px;
+      border: 10px solid #dcdcdc;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      position: relative;
+      background-color: #f0f0f0;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .frame:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Interactive effects when an image is clicked */
+    .active-frame {
+      border-color: #ff6347;
+    }
+
+  

@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+@media (max-width: 768px) {
+    .banner-container {
+        height: 240px; /* Ajusta l'alçada per a pantalles mitjanes */
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-container {
+        height: 120px; /* Ajusta l'alçada per a pantalles petites */
+    }
+}
+
+/* Estilos globales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #1c2833, #34495e); /* Fondo degradado */
+    color: #ecf0f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 100px;
+}
+
+
+.header1 {
+    position: fixed; /* Fija el header en la parte superior */
+    top: 0; /* Posición vertical en la parte superior */
+    left: 0; /* Alineado al lado izquierdo */
+    width: 100%; /* Hace que el header ocupe todo el ancho de la pantalla */
+    z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
+    padding: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    background: linear-gradient(135deg, #2c3e50, #2c3e50, #7f8c8d);
+    color: #f4f4f4;
+    font-weight: bold;
+    border-radius: 0 0 15px 15px; /* Redondeo en las esquinas inferiores */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    margin: 0 auto; /* Centra horizontalmente el contenido */
+    text-align: center;
+    line-height: 1.5;
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Línea decorativa */
+    margin-top: 45px;
+    margin-left: 100px;
+  }
+  
+  .logo {
+    margin-right: 100px;
+  }
+
+
+
+  .image-container {
+    position: absolute; /* Posiciona el contenedor de la imagen de forma absoluta */
+    top: 10px; /* Alinea la parte superior a 10px del borde de la pantalla */
+    right: 10px; /* Alinea la parte derecha a 10px del borde de la pantalla */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    margin-top: 40px;
+    margin-right: 100px;
+}
+
+.image-container img {
+    display: block; /* Asegura que la imagen respete el tamaño asignado */
+    width: 400px; /* Mantiene el ancho de la imagen */
+    height: 280px; /* Mantiene la altura de la imagen */
+    border-radius: 15px; /* Opcional: redondeo de bordes */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Opcional: sombra decorativa */
+}
+
+
+
+.main {
+    background-color: rgb(36, 36, 36);
+    padding: 1.5em; /* Reducido ligeramente */
+    padding-bottom: 1.7em; 
+    border-radius: 15px; /* Más compacto */
+    margin: 1.5em; /* Menos espacio alrededor */
+    margin-top: 120px; /* Desplazado hacia abajo */
+}
+
+.loader {
+    display: flex;
+    flex-direction: row;
+    height: 5em; /* Reducido ligeramente */
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    transform: rotate(180deg);
+    justify-content: right;
+    border-radius: 12px;
+    transition: 0.4s ease-in-out;
+}
+
+.loader:hover {
+    cursor: pointer;
+    background-color: lightgray;
+}
+
+.currentplaying {
+    display: flex;
+    margin: 1.5em; /* Más compacto */
+}
+
+.spotify {
+    width: 65px; /* Tamaño reducido */
+    height: 65px;
+    margin-right: 0.8em;
+}
+
+.heading {
+    color: rgb(255, 255, 255);
+    font-size: 1.3em; /* Fuente ligeramente más pequeña */
+    font-weight: bold;
+    align-self: center;
+}
+
+.loading {
+    display: flex;
+    margin-top: 1.2em; /* Ajuste menor */
+    margin-left: 0.4em;
+}
+
+.load {
+    width: 3px; /* Un poco más delgado */
+    height: 40px; /* Tamaño reducido */
+    background-color: limegreen;
+    animation: 1s move6 infinite;
+    border-radius: 6px; /* Redondeo ajustado */
+    margin: 0.15em;
+}
+
+.load:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.load:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.load:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.play {
+    position: relative;
+    left: 0.4em; /* Ajustado */
+    height: 2em; /* Tamaño más pequeño */
+    width: 2em;
+    clip-path: polygon(50% 50%, 100% 50%, 75% 6.6%);
+    background-color: #00FF7F;
+    transform: rotate(-90deg);
+    align-self: center;
+    margin-top: 0.8em;
+    justify-self: center;
+}
+
+.albumcover {
+    position: relative;
+    margin-right: 1em;
+    height: 50px; /* Tamaño más pequeño */
+    width: 50px;
+    background-color: rgb(233, 232, 232);
+    align-self: center;
+    border-radius: 6px;
+}
+
+.song {
+    position: relative;
+    transform: rotate(180deg);
+    margin-right: 1em;
+    color: white;
+    font-size: 1em; /* Fuente más pequeña */
+    align-self: center;
+}
+
+.artist {
+    font-size: 0.8em; /* Ajuste menor */
+}
+
+@keyframes move6 {
+    0% {
+        height: 0.4em; /* Ajuste menor */
+    }
+
+    25% {
+        height: 1em;
+    }
+
+    50% {
+        height: 2em;
+    }
+
+    100% {
+        height: 0.4em;
+    }
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}

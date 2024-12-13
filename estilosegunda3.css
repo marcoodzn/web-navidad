@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+@media (max-width: 768px) {
+    .banner-container {
+        height: 240px; /* Ajusta l'alçada per a pantalles mitjanes */
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-container {
+        height: 120px; /* Ajusta l'alçada per a pantalles petites */
+    }
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Spotify dark theme */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+
+
+
+
+.header {
+      position: fixed; /* Fija el header */
+      top: 0; /* Lo coloca en la parte superior de la página */
+      left: 50%; /* Lo coloca al centro horizontalmente */
+      transform: translateX(-50%); /* Ajusta el desplazamiento para centrarlo */
+      width: 100%; /* Opcional: Esto garantiza que el header ocupe todo el ancho */
+      text-align: center; /* Centra el contenido dentro del header */
+      padding: 10px; /* Agrega algo de espacio alrededor del logo */
+      z-index: 1000; /* Asegura que el header se quede encima de otros elementos */
+      margin-top: 25px;
+    }
+
+    .header-logo {
+      width: 300px; /* Ajusta el tamaño del logo según lo que necesites */
+      height: auto; /* Mantiene la proporción del logo */
+    }
+
+
+
+
+
+
+    .player-card {
+        background-color: #1e1e1e; /* Slightly lighter dark */
+        border-radius: 16px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        width: 300px;
+        text-align: center;
+        padding: 20px;
+        position: relative;
+        transition: box-shadow 0.4s, transform 0.4s;
+    }
+    
+    .player-card:hover {
+        box-shadow: 0 0 30px rgba(29, 185, 84, 0.8); /* Spotify green glow */
+        transform: scale(1.05); /* Slightly enlarge the card */
+    }
+    
+    .album-thumbnail {
+        width: 100%;
+        height: 0;
+        padding-bottom: 100%; /* Maintain square aspect ratio */
+        background-size: cover;
+        background-position: center;
+        border-radius: 16px;
+        margin-bottom: 20px;
+    }
+    
+    .song-details {
+        margin-bottom: 20px;
+    }
+    
+    .song-title {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    
+    .song-artist {
+        font-size: 1rem;
+        color: #b3b3b3;
+    }
+    
+    .controls {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .controls button {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+        transition: transform 0.2s, box-shadow 0.2s, color 0.2s;
+    }
+    
+    .controls button:hover {
+        transform: scale(1.2);
+        color: #1db954;
+        box-shadow: 0 0 10px #1db954;
+    }
+    
+    .progress-bar {
+        width: 100%;
+        height: 5px;
+        background: #535353;
+        border-radius: 3px;
+        overflow: hidden;
+        margin: 20px 0;
+    }
+    
+    .progress {
+        width: 40%;
+        height: 100%;
+        background: #1db954; /* Spotify green */
+    }
+    
+    _________
+    
+    
+    .player-card {
+        background-color: #1e1e1e; /* Slightly lighter dark */
+        border-radius: 16px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        width: 300px;
+        text-align: center;
+        padding: 20px;
+        position: relative;
+        transition: box-shadow 0.4s, transform 0.4s;
+    }
+    
+    .player-card:hover {
+        box-shadow: 0 0 30px rgba(29, 185, 84, 0.8); /* Spotify green glow */
+        transform: scale(1.05); /* Slightly enlarge the card */
+    }
+    
+    .album-thumbnail {
+        width: 100%;
+        height: 0;
+        padding-bottom: 100%; /* Maintain square aspect ratio */
+        background-size: cover;
+        background-position: center;
+        border-radius: 16px;
+        margin-bottom: 20px;
+    }
+    
+    .song-details {
+        margin-bottom: 20px;
+    }
+    
+    .song-title {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    
+    .song-artist {
+        font-size: 1rem;
+        color: #b3b3b3;
+    }
+    
+    .controls {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .controls button {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+        transition: transform 0.2s, box-shadow 0.2s, color 0.2s;
+    }
+    
+    .controls button:hover {
+        transform: scale(1.2);
+        color: #1db954;
+        box-shadow: 0 0 10px #1db954;
+    }
+    
+    .progress-bar {
+        width: 100%;
+        height: 5px;
+        background: #535353;
+        border-radius: 3px;
+        overflow: hidden;
+        margin: 20px 0;
+    }
+    
+    .progress {
+        width: 40%;
+        height: 100%;
+        background: #1db954; /* Spotify green */
+    }
+    
+    a {
+        color: #1db954;
+    }
+    
+    h1 {
+        font-size: 25pt;
+        font-weight: 700;
+    }

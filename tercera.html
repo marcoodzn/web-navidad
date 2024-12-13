@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactividad con Tarjetas y Marcos</title>
+  <link rel="stylesheet" href="tercera.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Nuestras aventuras con el pádel y deportes en general...</h1>
+  </header>
+
+  <!-- Card container with two cards -->
+  <div class="card-container">
+    <div class="card" onclick="changeFrameImage('frame1', 'https://via.placeholder.com/150')">
+      <img src="https://via.placeholder.com/200x300" alt="Card 1">
+    </div>
+    <div class="card" onclick="changeFrameImage('frame2', 'https://via.placeholder.com/150')">
+      <img src="https://via.placeholder.com/200x300" alt="Card 2">
+    </div>
+  </div>
+
+  <!-- Frame containers for photos -->
+  <div class="frame-container">
+    <div class="frame" id="frame1" onclick="selectFrame('frame1')">
+      <img src="https://via.placeholder.com/150" alt="Frame 1">
+    </div>
+    <div class="frame" id="frame2" onclick="selectFrame('frame2')">
+      <img src="https://via.placeholder.com/150" alt="Frame 2">
+    </div>
+    <div class="frame" id="frame3" onclick="selectFrame('frame3')">
+      <img src="https://via.placeholder.com/150" alt="Frame 3">
+    </div>
+  </div>
+
+  <script>
+    // Function to change the image of a specific frame when a card is clicked
+    function changeFrameImage(frameId, imageUrl) {
+      const frame = document.getElementById(frameId);
+      frame.querySelector('img').src = imageUrl;
+    }
+
+    // Function to add an active class to the selected frame for visual feedback
+    function selectFrame(frameId) {
+      const frames = document.querySelectorAll('.frame');
+      frames.forEach(frame => frame.classList.remove('active-frame'));
+      
+      const selectedFrame = document.getElementById(frameId);
+      selectedFrame.classList.add('active-frame');
+    }
+  </script>
+</body>
+</html>

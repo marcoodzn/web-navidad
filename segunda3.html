@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Style Player</title>
+    <link rel="stylesheet" href="estilosegunda3.css">
+</head>
+<body>
+    
+    <header class="header">
+        <a href="https://open.spotify.com/intl-es/track/2B6flXqyuL2TIEvmEyWyyf?si=e1fbf73c2c9d4e28"><img src="logo spotify.png" alt="Spotify Logo" class="header-logo"></a>
+    </header>
+    
+
+    <div class="player-card">
+        
+        <div class="song-details">
+            <div class="song-title"><h1>Nuestra Canción</h1></div>
+            <div class="song-artist">Sinceramente, creo que esta canción como tu misma has dicho alguna vez, nos define casi a la perfección.
+                <br> Nos representa desde el segundo <a href="https://youtu.be/u3paLzw8ZLI?t=45">0:46</a> que es como empezamos cada uno, pasando por esas aventuras que nos faltan por vivir cada verano con esa frase del minuto <a href="https://youtu.be/u3paLzw8ZLI?t=114">1:55</a> y hasta llegar al punto de querer ... <a href="https://youtu.be/u3paLzw8ZLI?t=126s">2:07</a>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="player-card">
+        <div class="album-thumbnail" style="background-image: url('foto\ rosa\ casa\ dia\ aniversario.jpg');"></div>
+        <div class="song-details">
+            <div class="song-title">Romeo y Julieto</div>
+            <div class="song-artist">DELLAFUENTE</div>
+        </div>
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+        <div class="controls">
+            <button >&#9664;&#9664;</button>
+            <button onclick="window.location.href='https://open.spotify.com/intl-es/track/4Pdr4RaJTinnIQXYHdkRXt?si=1ecd14dd25c04389';">&#9654;</button>
+            <button onclick="redirigir()">&#9654;&#9654;</button>
+        </div>
+    </div>
+    
+
+    <div class="player-card">
+        
+        <div class="song-details">
+            <div class="song-title"><h1>Para Continuar...</h1></div>
+            <div class="song-artist">Dime la verdad, ¿Te está gustando? <br> Si estamos juntos, dilo mirándome a los ojos y si no estoy contigo pues así piensas en mí de vez en cuando que no te vendrá mal. <br>Sé que no me lo he currado mucho pero, ¿Participar es lo que cuenta noo? <br>Por cierto, por si no lo habias intentado puedes probar a darle al play, a cada uno de los segundos de la canción remarcados y finalmente al símbolo de cambiar de canción. Eso si, solo si tu quieres, como tú siempre me dices 
+
+            </div>
+        </div>
+    </div>
+    
+
+
+
+<script>
+    const playButton = document.getElementById('play');
+    const progressBar = document.getElementById('progress');
+    let isPlaying = false;
+    let progressInterval;
+    
+    playButton.addEventListener('click', () => {
+        if (isPlaying) {
+            clearInterval(progressInterval);
+            playButton.innerHTML = '&#9654;'; // Cambiar a icono de play
+        } else {
+            progressInterval = setInterval(() => {
+                let currentWidth = parseInt(progressBar.style.width) || 0;
+                if (currentWidth >= 100) {
+                    clearInterval(progressInterval);
+                } else {
+                    progressBar.style.width = (currentWidth + 1) + '%';
+                }
+            }, 500);
+            playButton.innerHTML = '&#10074;&#10074;'; // Cambiar a icono de pausa
+        }
+        isPlaying = !isPlaying;
+    });
+    
+    document.getElementById('prev').addEventListener('click', () => {
+        alert('Ir a la canción anterior');
+        progressBar.style.width = '0%'; // Resetea la barra
+    });
+    
+    document.getElementById('next').addEventListener('click', () => {
+        alert('Ir a la siguiente canción');
+        progressBar.style.width = '0%'; // Resetea la barra
+    });
+
+
+    function redirigir() {
+      // Reemplaza 'pagina.html' con la ruta de tu archivo HTML local
+      window.location.href = "tercera.html";
+    }
+  
+</script>
+
+
+
+
+
+
+</body>
+</html>

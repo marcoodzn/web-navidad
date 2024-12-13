@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+
+
+@media (max-width: 768px) {
+    .banner-container {
+        height: 240px; /* Ajusta l'alçada per a pantalles mitjanes */
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-container {
+        height: 120px; /* Ajusta l'alçada per a pantalles petites */
+    }
+}
+
+
+/* Estilos globales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #1c2833, #34495e);
+    color: #ecf0f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 100px;
+}
+
+.content-wrapper::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+/* Contenedor de tarjetas */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    margin-bottom: 30px; /* Espacio debajo del contenedor para la paginación */
+}
+
+
+/* Estilo de cada tarjeta */
+.card {
+    background: #2c3e50;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 300px;
+    height: 670px; /* Aumenta la altura para dar más espacio al contenido */
+    cursor: pointer;
+    display: flex;
+    flex-direction: column; /* Asegura que imagen y contenido estén en columna */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Imagen de la tarjeta */
+.card img {
+    width: 100%;
+    height: 250px; /* Imagen más alta */
+    object-fit: cover;
+}
+
+/* Contenido de la tarjeta */
+.card-content {
+    padding: 20px;
+    flex-grow: 1; /* Aumenta el espacio disponible para el contenido */
+    text-align: center;
+}
+
+.card-content h3 {
+    margin: 0 0 10px;
+    font-size: 1.5rem;
+    color: #ecf0f1;
+}
+
+.card-content p {
+    margin: 0;
+    font-size: 1rem;
+    color: #bdc3c7;
+    overflow-y: auto;
+}
+
+
+.header {
+    background: linear-gradient(135deg, #2c3e50, #7f8c8d); /* Fondo degradado elegante */
+    color: #ecf0f1;
+    padding: 40px 20px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    border-bottom: 3px solid #bdc3c7; /* Línea sutil en la parte inferior */
+    position: fixed; /* Fijamos el encabezado en la parte superior */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Asegura que quede por encima de otros elementos */
+    transition: background-color 0.3s ease; /* Efecto suave al hacer scroll */
+}
+
+/* Cambiar fondo del header al hacer scroll */
+.header.scrolled {
+    background: linear-gradient(135deg, #34495e, #2c3e50); /* Fondo más oscuro al hacer scroll */
+}
+
+/* Estilo del contenido del encabezado */
+.header-content h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.header-content p {
+    font-size: 1.2rem;
+    margin: 10px 0 0;
+    color: #bdc3c7;
+}
+
+.botonstart {
+    margin: 20px;
+    position: fixed;
+    bottom: 20px;  /* Distancia desde la parte inferior */
+    left: 50%;
+    transform: translateX(-50%); /* Centra el botón horizontalmente */
+    z-index: 1000;  /* Asegura que quede sobre otros elementos */
+    
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    background: #0059ff;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+    background: #f8b500;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+}
+
+________________
+
+
+.botonstart2 {
+    margin: 20px;
+    position: fixed;
+    bottom: 20px;  /* Distancia desde la parte inferior */
+    left: 50%;
+    transform: translateX(-50%); /* Centra el botón horizontalmente */
+    z-index: 1000;  /* Asegura que quede sobre otros elementos */
+    
+}
+
+.button2 {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    background: #0059ff;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.button2:hover {
+    background: #f8b500;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+}
+
